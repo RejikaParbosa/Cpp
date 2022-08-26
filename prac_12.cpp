@@ -41,27 +41,27 @@ class scst: public student
 
 void student :: getdata()
 {
-    cout << "Enter the Roll_no: " << endl;
+    cout << "Enter the Roll_no: ";
     cin >> roll_no;
-    cout << "Enter the name of student: " << endl;
+    cout << "Enter the name of student: ";
     cin >> sname;
 }
 
 void student :: display()
 {
-    cout << roll_no << " \t " << sname << "\t";
+    cout <<roll_no<<"\t\t"<<sname<<"\t";
 }
 
 void artst :: takedata()
 {
     student :: getdata();
-    cout << "Enter the marks for philosophy: " << endl;
+    cout << "Enter the marks for philosophy: ";
     cin >> ph;
-    cout << "Enter the marks for history: " << endl;
+    cout << "Enter the marks for history: ";
     cin >> hs;
-    cout << "Enter the marks for English: " << endl;
+    cout << "Enter the marks for English: ";
     cin >> en;
-    cout << "Enter the marks for Assamese: " << endl;
+    cout << "Enter the marks for Assamese: ";
     cin >> as;
 }
 
@@ -78,19 +78,19 @@ void artst :: showdata()
 void scst :: takedata()
 {
     student :: getdata();
-    cout << "Enter the marks for Physics: " << endl;
+    cout << "Enter the marks for Physics: ";
     cin >> ph;
-    cout << "Enter the marks for Chemistry: " << endl;
+    cout << "Enter the marks for Chemistry: ";
     cin >> ch;
-    cout << "Enter the marks for Mathematics: " << endl;
+    cout << "Enter the marks for Mathematics: ";
     cin >> ma;
-    cout << "Enter the marks for English: " << endl;
+    cout << "Enter the marks for English: ";
     cin >> en;
 }
 
 void scst :: ctotal()
 {
-    total: ph+ch+ma+en;
+    total= ph + ch + ma + en;
 }
 
 void scst :: showdata()
@@ -104,7 +104,7 @@ main()
     int i,n;
     artst obj[10];
     scst obj1[10];
-    cout << "Enter Arts student Information: " << endl;
+    cout << "\tEnter Arts student Information" << endl;
     cout << "Enter the number of students: ";
     cin >> n;
     for (i=0; i<n; i++)
@@ -114,12 +114,12 @@ main()
     for(i=0; i<n; i++)
     {
         obj[i].ctotal();
-    cout << "\n Roll_no: \t Name: \t Philosophy: \t History: \t English: \t Assamese: \t Total: " << endl;
+    cout << "\nRoll_no:\tName:\tPhilosophy:\tHistory:\tEnglish:\tAssamese:\tTotal: " << endl;
     cout << "" << endl;
 
     for (i=0; i<n; i++)
         obj[i].showdata();
-        cout << "Enter the Science Students Information: " << endl;
+        cout << "\n\tEnter the Science Students Information" << endl;
         cout<< "Enter the number of Students: ";
         cin >> n;
     for (i=0; i<n; i++)
@@ -128,7 +128,7 @@ main()
     }
     for(i=0; i<n; i++)
         obj1[i].ctotal();
-    cout << "\n Roll_no: \t Name: \t Physics: \t Chemistry: \t Mathematics: \t English: \t Total: " <<endl;
+    cout << "\nRoll_no:\tName:\tPhysics:\tChemistry:\tMathematics:\tEnglish:\tTotal: " <<endl;
     cout << "" << endl;
 
     for(i=0; i<n; i++)
