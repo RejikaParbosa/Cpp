@@ -2,7 +2,7 @@
 using namespace std;
 class printer
 {
-    public: virtual void display();
+    public: virtual void display()=0;
 };
 
 class laser_printer : public printer
@@ -14,9 +14,9 @@ public:
     void getdata()
     {
         cout << "Laser Print\n";
-        cout << "Price of the Printer: ";
+        cout << "\tPrice of the Printer: ";
         cin >> price;
-        cout << "Speed of the printer: ";
+        cout << "\tSpeed of the printer: ";
         cin >> speed;
     }
     void display()
@@ -37,7 +37,7 @@ public:
         cout << "\n Line Printer \n";
         cout << "\t Price of the Printer: ";
         cin >> price;
-        cout << "Speed of the Printer: ";
+        cout << "\t Speed of the Printer: ";
         cin >> speed;
     }
     void display()
@@ -75,14 +75,14 @@ main()
     inkjet_printer obj2;
 
     obj.getdata();
-    p = &obj;
+    p = & obj;
     p -> display();
 
     obj1.getdata();
-    p = &obj1;
+    p = & obj1;
     p -> display();
 
     obj2.getdata();
-    p = &obj2;
+    p = & obj2;
     p -> display();
 }
